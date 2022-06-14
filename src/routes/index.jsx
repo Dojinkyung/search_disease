@@ -1,8 +1,12 @@
-// import styles from './routes.module.scss'
+import styles from './Routes.module.scss'
+import Search from '../components/Search'
 
-// import { BrowserRouter, Routes, Route } from 'react-router-dom'
 const App = () => {
-  return <div>hello</div>
+  return (
+    <div className={styles.app}>
+      <Search />
+    </div>
+  )
 }
 
 export default App
