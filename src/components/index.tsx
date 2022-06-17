@@ -34,22 +34,29 @@ const Search = () => {
 
   return (
     <main className={styles.centering}>
-      <h1>국내 모든 임상시험 검색하고 온라인으로 참여하기</h1>
-      <form onSubmit={onSubmit}>
-        <div className={styles.input}>
-          <SearchIcon />
-          <input type='text' placeholder='질환명을 입력해 주세요.' onChange={debouncedResults} />
+      <h1 className={styles.title}>국내 모든 임상시험 검색하고 온라인으로 참여하기</h1>
+      <form onSubmit={onSubmit} className={styles.form}>
+        <div className={styles.inputForm}>
+          <SearchIcon className={styles.searchIcon} />
+          <input
+            className={styles.input}
+            type='text'
+            placeholder='질환명을 입력해 주세요.'
+            onChange={debouncedResults}
+          />
         </div>
-        <button type='submit'>검색</button>
+        <button className={styles.button} type='submit'>
+          검색
+        </button>
       </form>
       {inputSearch && (
-        <ul>
-          <li>추천 검색어</li>
+        <ul className={styles.ul}>
+          <li className={styles.search}>추천 검색어</li>
           <LoadingOrNoSearch />
           {items?.map((searched: Iitem) => (
-            <li key={searched.sickCd}>
+            <li key={searched.sickCd} className={styles.item}>
               <SearchIcon />
-              <p className={styles.title}>{highlightedText(searched.sickNm, inputSearch)}</p>
+              <p className={styles.items}>{highlightedText(searched.sickNm, inputSearch)}</p>
             </li>
           ))}
         </ul>

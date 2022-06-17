@@ -7,52 +7,7 @@
   @include flexbox.flexbox(center, center);
   flex-direction: column;
   width: 700px;
-  height: 50px;
   margin-top: 10px;
   background-color: colors.$WHITE;
   border-radius: 20px;
-}
-
-ul {
-  @include flexbox.flexbox(start, start);
-  flex-direction: column;
-  width: 700px;
-  height: 100%;
-  margin-top: 10px;
-  background-color: colors.$WHITE;
-  border-radius: 20px;
-
-  li {
-    @include flexbox.flexbox(start, center);
-    flex-direction: row;
-    width: 97%;
-    margin-left: 10px;
-
-    &:hover {
-      cursor: pointer;
-      background-color: colors.$GRAYD;
-      border-radius: 5px;
-    }
-
-    &:focus {
-      cursor: pointer;
-      background-color: colors.$GRAYD;
-      border-radius: 5px;
-    }
-  }
-
-  p {
-    width: 90%;
-    padding: 10px 5px 5px 10px;
-    font-size: 17px;
-    color: colors.$BLACK;
-
-    b {
-      font-weight: 600;
-    }
-  }
-
-  path {
-    fill: gray;
-  }
 }
