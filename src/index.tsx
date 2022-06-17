@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import reportWebVitals from './reportWebVitals'
 import './styles/index.scss'
 import store from './redux/store'
-import App from './routes'
+import App from './page'
 
 const queryClient = new QueryClient()
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)

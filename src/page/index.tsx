@@ -1,5 +1,5 @@
-import styles from './Routes.module.scss'
-import Search from '../components/Search'
+import Search from '../components'
+import styles from './page.module.scss'
 
 const App = () => {
   return (

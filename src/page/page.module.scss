@@ -1,0 +1,9 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/flexbox';
+
+.app {
+  flex-direction: column;
+  height: 100vh;
+  background-color: #cae9ff;
+  @include flexbox.flexbox(center, center);
+}

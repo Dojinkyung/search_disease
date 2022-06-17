@@ -33,6 +33,12 @@ ul {
       background-color: colors.$GRAYD;
       border-radius: 5px;
     }
+
+    &:focus {
+      cursor: pointer;
+      background-color: colors.$GRAYD;
+      border-radius: 5px;
+    }
   }
 
   p {
