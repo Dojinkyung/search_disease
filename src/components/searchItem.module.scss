@@ -1,0 +1,32 @@
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/constants/colors';
+
+.item {
+  @include flexbox.flexbox(start, center);
+  flex-direction: row;
+  width: 97%;
+  margin-left: 10px;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: colors.$GRAYD;
+    border-radius: 5px;
+  }
+
+  .items {
+    width: 90%;
+    padding: 10px 5px 5px 10px;
+    font-size: 15px;
+    color: colors.$BLACK;
+  }
+
+  path {
+    fill: gray;
+  }
+}
+
+.focusedItem {
+  background-color: colors.$GRAYD;
+  border-radius: 5px;
+}

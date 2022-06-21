@@ -60,4 +60,6 @@ https://www.data.go.kr/iim/api/selectAPIAcountView.do
 
 # ✏️ 어려웠던 점+ 추가할 기능
 
-- 키보드로 검색어를 up, down하는 기능을 구현 중에 있습니다.
+- 키보드로 검색어를 up, down하는 기능을 구현하는 부분이 어려웠습니다.
+
+- 키보드로 선택된 검색어를 검색창에 보여주는 기능을 구현 중에 있습니다.

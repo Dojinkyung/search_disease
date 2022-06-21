@@ -73,48 +73,13 @@
     @include flexbox.flexbox(start, start);
     flex-direction: column;
     width: 700px;
-    height: 40%;
+    height: 100%;
     margin-top: 10px;
-    overflow: scroll;
     background-color: colors.$WHITE;
     border-radius: 20px;
 
     .search {
-      padding: 5px 0 5px 25px;
-    }
-
-    .item {
-      @include flexbox.flexbox(start, center);
-      flex-direction: row;
-      width: 97%;
-      margin-left: 10px;
-
-      &:hover {
-        cursor: pointer;
-        background-color: colors.$GRAYD;
-        border-radius: 5px;
-      }
-
-      &:focus {
-        cursor: pointer;
-        background-color: colors.$GRAYD;
-        border-radius: 5px;
-      }
-    }
-
-    .items {
-      width: 90%;
-      padding: 10px 5px 5px 10px;
-      font-size: 15px;
-      color: colors.$BLACK;
-
-      b {
-        font-weight: 600;
-      }
-    }
-
-    path {
-      fill: gray;
+      padding: 20px;
     }
   }
 }
