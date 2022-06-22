@@ -21,14 +21,13 @@
  ┣ 📂components
  ┃ ┣ 📜Highlighted # 검색 단어 볼드처리
  ┃ ┣ 📜index # 검색과 결과
- ┃ ┗ 📜LoadingOrNoSearch # 로딩과 검색결과 없을 때
- ┣ 📂hooks # redux dispatch, selector와 axios를 위한 hook
+ ┃ ┣ 📜LoadingOrNoSearch # 로딩과 검색결과 없을 때
+ ┃ ┗ 📜searchItem # 검색 결과 리스트
  ┣ 📂page # 출력 화면
  ┣ 📂redux # redux slice와 store
  ┣ 📂services # 데이터 불러오는 컴포넌트
  ┣ 📂styles # CSS 스타일을 위한 폴더
- ┣ 📂types # Typescript 정의 파일
- ┗ 📂utils # data format 해주는 유틸 파일이 있는 폴더
+ ┗ 📂types # Typescript 정의 파일
 
 ```
 
