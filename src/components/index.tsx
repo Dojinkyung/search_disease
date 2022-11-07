@@ -9,7 +9,7 @@ import { Iitem } from '../types/search.d'
 import handleKeyboardFunc from './keyboard'
 import LoadingOrNoSearch from './LoadingOrNoSearch'
 
-import styles from './search.module.scss'
+import styles from './index.module.scss'
 import SearchItem from './searchItem'
 
 const Search = () => {
@@ -60,7 +60,7 @@ const Search = () => {
           <li className={styles.search}>추천 검색어</li>
           <LoadingOrNoSearch />
           {items?.map((searched: Iitem, idx) => (
-            <SearchItem key={searched.sickCd} diseaseName={searched.sickNm} isFocus={idx === index} />
+            <SearchItem key={searched.trial_id} diseaseName={searched.scientific_title_kr} isFocus={idx === index} />
           ))}
         </ul>
       )}

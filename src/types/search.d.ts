@@ -19,8 +19,8 @@ interface Items {
 }
 
 export interface Iitem {
-  sickCd: string
-  sickNm: string
+  trial_id: string
+  scientific_title_kr: string
 }
 
 interface Header {

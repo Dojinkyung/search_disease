@@ -2,10 +2,10 @@ import { useQuery } from 'react-query'
 import { getDiseaseInfoAPI } from './disease'
 import { isAxiosError } from '../utils/axios'
 
-const useSearch = (searchText: string) => {
+const useSearch = (srchWord: string) => {
   const { data, isLoading } = useQuery(
-    ['getDiseaseInfoAPI', searchText],
-    () => getDiseaseInfoAPI({ searchText }).then((res) => res.data.response.body.items.item),
+    ['getDiseaseInfoAPI', srchWord],
+    () => getDiseaseInfoAPI({ srchWord }).then((res) => res.data.items),
     {
       retry: 0,
       refetchOnWindowFocus: false,
@@ -19,6 +19,7 @@ const useSearch = (searchText: string) => {
       },
     }
   )
+
   let items
 
   if (Array.isArray(data)) {

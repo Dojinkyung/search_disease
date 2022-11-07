@@ -44,14 +44,19 @@ yarn install && yarn start
 ```
 
 ## 2. 📸 화면
+![모바일](https://user-images.githubusercontent.com/63532503/200252821-3e4a62f4-e9df-4d17-993c-eacbb460d825.gif)
 
 # 💡 구현 내용
 
 ## 1. 공공데이터 활용
 
-https://www.data.go.kr/iim/api/selectAPIAcountView.do
+~~https://www.data.go.kr/iim/api/selectAPIAcountView.do~~
 
-건강보험심사평가원\_질병정보서비스를 이용하여 질병을 검색할 수 있는 페이지를 만들었습니다.
+~~건강보험심사평가원\_질병정보서비스를 이용하여 질병을 검색할 수 있는 페이지를 만들었습니다.~~ -> 데이터 폐기
+
+https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=3033869
+
+질병관리청\_ 임상연구 DB를 이용하여 임상연구를 검색할 수 있도록 하였습니다.
 
 ## 2. mark 처리
 

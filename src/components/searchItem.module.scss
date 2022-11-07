@@ -3,8 +3,8 @@
 
 .item {
   @include flexbox.flexbox(start, center);
-  flex-direction: row;
   width: 97%;
+  flex-direction: row;
   margin-left: 10px;
 
   &:hover,
@@ -16,9 +16,14 @@
 
   .items {
     width: 90%;
+    height: 45px;
     padding: 10px 5px 5px 10px;
     font-size: 15px;
     color: colors.$BLACK;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
   }
 
   path {
