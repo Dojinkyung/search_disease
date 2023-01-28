@@ -1,36 +1,20 @@
 @use '/src/styles/mixins/flexbox';
 @use '/src/styles/constants/colors';
 
-.item {
+.items {
   @include flexbox.flexbox(start, center);
-  width: 100%;
-  flex-direction: row;
-
-  &:hover,
-  &:focus {
-    cursor: pointer;
-    background-color: colors.$GRAYD;
-    border-radius: 5px;
+  width: 90%;
+  height: 45px;
+  padding-left: 10px;
+  font-size: 15px;
+  color: colors.$BLACK;
+  overflow: hidden;
+  white-space: nowrap;
+  .icon {
+    min-width: 20px;
+    margin-right: 5px;
   }
-
-  .items {
-    width: 90%;
-    height: 45px;
-    padding: 10px 5px 5px 10px;
-    font-size: 15px;
-    color: colors.$BLACK;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    word-break: break-all;
-  }
-
   path {
     fill: colors.$GRAY6;
   }
-}
-
-.focusedItem {
-  background-color: colors.$GRAYD;
-  border-radius: 5px;
 }

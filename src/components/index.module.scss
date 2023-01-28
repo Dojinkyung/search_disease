@@ -6,7 +6,6 @@
   @include flexbox.flexbox(center, center);
   width: 100%;
   flex-direction: column;
-  position: relative;
   .title {
     width: 400px;
     padding-bottom: 10px;
@@ -17,68 +16,37 @@
     text-align: center;
     letter-spacing: -0.018em;
     @include responsive.between(0px, 800px) {
-      width: 300px;
+      width: 320px;
       font-size: 25px;
     }
   }
 
-  .form {
+  .inputForm {
     @include flexbox.flexbox(between, center);
     @include responsive.between(0px, 800px) {
       width: 80%;
     }
     width: 50%;
-    position: static;
-    min-height: 60px;
-    max-height: 60px;
+    height: 60px;
     padding-left: 10px;
     overflow: hidden;
     background: colors.$WHITE;
     border-radius: 50px;
-    position: relative;
-    .inputForm {
-      width: 80%;
-      height: 60px;
-      margin: 2px;
-      padding: 2px;
-      @include flexbox.flexbox(start, center);
-
-      .searchIcon {
-        fill: colors.$GRAY6;
-      }
-
-      .input {
-        width: 100%;
-        padding-left: 10px;
-        font-size: 20px;
-        color: inherit;
-        color: colors.$BLACK;
-        border-radius: 10px;
-      }
-
-      .input[type='search']::placeholder {
-        font-size: 20px;
-        color: colors.$GRAYD;
-      }
+    .searchIcon {
+      fill: colors.$GRAY6;
+      margin-left: 10px;
+    }
+    .input {
+      width: 100%;
+      padding-left: 10px;
+      font-size: 20px;
+      color: colors.$BLACK;
+      border-radius: 10px;
     }
 
-    .button {
-      @include flexbox.flexbox(start, center);
-      @include responsive.between(0px, 800px) {
-        display: none;
-      }
-      display: flex;
-      width: 15%;
-      height: 60px;
-      position: absolute;
-      justify-content: center;
-      right: 0%;
-      font-size: 15px;
-      font-weight: 700;
-      color: colors.$WHITE;
-      letter-spacing: -0.018em;
-      cursor: pointer;
-      background-color: colors.$BLUE;
+    .input[type='search']::placeholder {
+      font-size: 20px;
+      color: colors.$GRAYD;
     }
   }
 
@@ -94,9 +62,24 @@
     @include responsive.between(0px, 800px) {
       width: 80%;
     }
-
+    .item {
+      @include flexbox.flexbox(start, center);
+      width: 100%;
+      flex-direction: row;
+      padding-left: 10px;
+      &:hover,
+      &:focus {
+        cursor: pointer;
+        background-color: colors.$GRAYD;
+        border-radius: 5px;
+      }
+    }
     .search {
       padding: 20px;
     }
   }
+}
+.focusedItem {
+  background-color: colors.$GRAYD;
+  border-radius: 5px;
 }
