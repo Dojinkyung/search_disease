@@ -17,7 +17,7 @@ const SearchItem = ({ diseaseName, isFocus }: Props) => {
     <li className={cx(styles.item, { [styles.focusedItem]: isFocus })}>
       <SearchIcon />
       <button type='button' className={styles.items}>
-        {highlightedText(diseaseName, inputSearch)}
+        <a href={`https://www.google.com/search?q=${diseaseName}`}>{highlightedText(diseaseName, inputSearch)}</a>
       </button>
     </li>
   )

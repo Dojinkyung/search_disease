@@ -3,9 +3,8 @@
 
 .item {
   @include flexbox.flexbox(start, center);
-  width: 97%;
+  width: 100%;
   flex-direction: row;
-  margin-left: 10px;
 
   &:hover,
   &:focus {

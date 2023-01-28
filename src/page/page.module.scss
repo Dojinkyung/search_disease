@@ -4,6 +4,15 @@
 .app {
   flex-direction: column;
   height: 100vh;
+  width: 100vw;
   background-color: #cae9ff;
   @include flexbox.flexbox(center, center);
+  aside {
+    position: absolute;
+    bottom: 5%;
+    a {
+      color: colors.$BLUE;
+      text-decoration: underline;
+    }
+  }
 }

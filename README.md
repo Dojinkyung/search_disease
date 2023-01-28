@@ -50,10 +50,6 @@ yarn install && yarn start
 
 ## 1. 공공데이터 활용
 
-~~https://www.data.go.kr/iim/api/selectAPIAcountView.do~~
-
-~~건강보험심사평가원\_질병정보서비스를 이용하여 질병을 검색할 수 있는 페이지를 만들었습니다.~~ -> 데이터 폐기
-
 https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=3033869
 
 질병관리청\_ 임상연구 DB를 이용하여 임상연구를 검색할 수 있도록 하였습니다.

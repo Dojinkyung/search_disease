@@ -6,11 +6,10 @@ import styles from './loadingOrNoSearch.module.scss'
 const LoadingOrNoSearch = () => {
   const inputSearch = useSelector((state: RootState) => state.searchReducer.searchString)
   const { items, isLoading } = useSearch(inputSearch)
-
   if (inputSearch && isLoading) {
     return <div className={styles.loadingAndError}>Loading...</div>
   }
-  if (items?.length === undefined) {
+  if (items?.length === 0) {
     return <div className={styles.loadingAndError}>검색어 없음</div>
   }
   return null

@@ -1,6 +1,6 @@
 import { useQuery } from 'react-query'
-import { getDiseaseInfoAPI } from './disease'
 import { isAxiosError } from '../utils/axios'
+import { getDiseaseInfoAPI } from './getDisease'
 
 const useSearch = (srchWord: string) => {
   const { data, isLoading } = useQuery(

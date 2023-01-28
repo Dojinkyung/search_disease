@@ -6,11 +6,10 @@ import { setSearchString } from '../redux/slice'
 import { RootState } from '../redux/store'
 import useSearch from '../services/useSearch'
 import { Iitem } from '../types/search.d'
-import handleKeyboardFunc from './keyboard'
+import handleKeyboardFunc from '../services/useKeyboard'
 import LoadingOrNoSearch from './LoadingOrNoSearch'
-
 import styles from './index.module.scss'
-import SearchItem from './searchItem'
+import SearchItem from './SearchItem'
 
 const Search = () => {
   const dispatch = useDispatch()
