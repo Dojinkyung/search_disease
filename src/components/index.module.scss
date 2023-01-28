@@ -49,37 +49,4 @@
       color: colors.$GRAYD;
     }
   }
-
-  .ul {
-    @include flexbox.flexbox(start, start);
-    width: 50%;
-    max-height: 40vh;
-    flex-direction: column;
-    margin-top: 10px;
-    background-color: colors.$WHITE;
-    border-radius: 20px;
-    overflow: scroll;
-    @include responsive.between(0px, 800px) {
-      width: 80%;
-    }
-    .item {
-      @include flexbox.flexbox(start, center);
-      width: 100%;
-      flex-direction: row;
-      padding-left: 10px;
-      &:hover,
-      &:focus {
-        cursor: pointer;
-        background-color: colors.$GRAYD;
-        border-radius: 5px;
-      }
-    }
-    .search {
-      padding: 20px;
-    }
-  }
-}
-.focusedItem {
-  background-color: colors.$GRAYD;
-  border-radius: 5px;
 }

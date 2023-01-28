@@ -1,38 +1,27 @@
 import debounce from 'lodash.debounce'
-import { ChangeEvent, useEffect, useMemo, useRef, useState } from 'react'
+import { ChangeEvent, useEffect, useMemo, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { SearchIcon } from '../assets/svgs'
 import { setSearchString } from '../redux/slice'
 import { RootState } from '../redux/store'
 import useSearch from '../services/useSearch'
-import { Iitem } from '../types/search.d'
-import LoadingOrNoSearch from './LoadingOrNoSearch'
 import styles from './index.module.scss'
-import SearchItem from './SearchItem'
-import { cx } from '../styles'
+import SearchResults from './SearchResults'
 
 const Search = () => {
   const dispatch = useDispatch()
   const inputSearch = useSelector((state: RootState) => state.searchReducer.searchString)
   const { items } = useSearch(inputSearch)
   const [index, setIndex] = useState<number>(-1)
-  const autoRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    if (!autoRef.current) return
-
-    autoRef.current.scrollIntoView({
-      block: 'center',
-    })
-  }, [index])
   const handleSelection = (selectedIndex: number) => {
     if (items) {
       const selectedItem = items[selectedIndex]
 
-      if (!selectedItem) return setIndex(-1)
-      window.location.assign(`https://www.google.com/search?q=${selectedItem.scientific_title_kr}`)
+      if (!selectedItem) return setIndex(selectedIndex)
+      window.open(`https://www.google.com/search?q=${selectedItem.scientific_title_kr}`)
     }
-    return items
+    return setIndex(selectedIndex)
   }
   const debouncedResults = useMemo(() => {
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -82,22 +71,7 @@ const Search = () => {
           onChange={debouncedResults}
         />
       </form>
-
-      {inputSearch && (
-        <div className={styles.ul}>
-          <div className={styles.search}>추천 검색어</div>
-          <LoadingOrNoSearch />
-          {items?.map((searched: Iitem, idx) => (
-            <div
-              key={searched.trial_id}
-              ref={idx === index ? autoRef : null}
-              className={cx(styles.item, { [styles.focusedItem]: idx === index })}
-            >
-              <SearchItem diseaseName={searched.scientific_title_kr} />
-            </div>
-          ))}
-        </div>
-      )}
+      {inputSearch && <SearchResults items={items} index={index} />}
     </main>
   )
 }
